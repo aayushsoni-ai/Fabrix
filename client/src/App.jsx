@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
 import Verify from "./pages/Verify";
 import { ToastContainer, toast } from 'react-toastify';
-import Loader from "./pages/Loader";
+import Loader from "./components/Loader";
 
 const App = () => {
   return (
