@@ -180,7 +180,7 @@ const Add = ({ token }) => {
             <option className="font-outfit" value="Bottomwear">
               Bottomwear
             </option>
-            <option className="font-outfit" value="Winterwear ">
+            <option className="font-outfit" value="Winterwear">
               Winterwear
             </option>
           </select>
