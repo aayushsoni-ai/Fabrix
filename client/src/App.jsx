@@ -15,6 +15,8 @@ import SearchBar from "./components/SearchBar";
 import Verify from "./pages/Verify";
 import { ToastContainer, toast } from 'react-toastify';
 import Loader from "./components/Loader";
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   return (
@@ -36,6 +38,9 @@ const App = () => {
         <Route path="/verify" element={<Verify/>} />
       </Routes>
       <Footer/>
+      <Analytics/>
+      <SpeedInsights/>
+
     </div>
   );
 };
