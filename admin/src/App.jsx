@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/SideBar";
 import Login from "./components/Login";
 import { ToastContainer } from "react-toastify";
+import Loader from "./pages/Loader";
 
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL
@@ -23,6 +24,7 @@ const App = () => {
   
   return (
     <div className="bg-amber-50 min-h-screen">
+      <Loader/>
       <ToastContainer/>
       {token === "" ? (
         <Login setToken={setToken}/>

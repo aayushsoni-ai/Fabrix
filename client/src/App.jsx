@@ -14,10 +14,12 @@ import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
 import Verify from "./pages/Verify";
 import { ToastContainer, toast } from 'react-toastify';
+import Loader from "./pages/Loader";
 
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-amber-50 ">
+      <Loader/>
       <ToastContainer/>
       <Navbar/>
       <SearchBar/>
