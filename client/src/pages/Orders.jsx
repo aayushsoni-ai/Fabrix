@@ -74,7 +74,7 @@ const Orders = () => {
             <div className="md:w-1/2 flex justify-between" >
             <div className="flex items-center gap-2 ">
               <p className="min-w-2 h-2 rounded-full bg-green-500"></p>
-              <p className="text-sm md:text-base">{item.status}</p>
+              <p className="text-sm font-semibold md:text-base">{item.status}</p>
             </div>
             <button onClick={loadOrderData} className="relative px-3 py-1.5 text-sm text-white font-bold  bg-[#ba976c] rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:bg-[#C0A08B]">
   Track Order
