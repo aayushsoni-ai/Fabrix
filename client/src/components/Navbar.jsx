@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { assets } from "../assets/assets.js";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext.jsx";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const location = useLocation();
   const {
     setShowSearch,
+    showSearch,
     getCartCount,
     navigate,
     token,
@@ -23,6 +25,22 @@ const Navbar = () => {
     // toast.success("Logout successfully!!")
     navigate("/login");
   };
+
+  //  Redirect to `/collection` when search is opened
+  useEffect(() => {
+    if (showSearch && location.pathname !== "/collection") {
+      navigate("/collection");
+    }
+  }, [showSearch, navigate, location.pathname]);
+
+  //  Close search only when leaving `/collection`
+  useEffect(() => {
+    if (location.pathname !== "/collection") {
+      navigate(location.pathname)
+      setShowSearch(false)
+    }
+  }, [location.pathname, setShowSearch]);
+  
   return (
     <div className="flex items-center justify-between z-5 py-5 font-medium">
       <Link to={"/"}>
